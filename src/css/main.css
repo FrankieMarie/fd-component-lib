@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+
+@keyframes changeColor1 {
+  25% {
+    opacity: 1; }
+  50% {
+    opacity: .55; }
+  75% {
+    opacity: .55; } }
+
+@keyframes changeColor2 {
+  25% {
+    opacity: .55; }
+  50% {
+    opacity: 1; }
+  75% {
+    opacity: .55; } }
+
+@keyframes changeColor3 {
+  25% {
+    opacity: .55; }
+  50% {
+    opacity: .55; }
+  75% {
+    opacity: 1; } }
+
+/*
+0-600px:      Phone
+600-900px:    Tablet Portrait
+900-1200px:   Tablet Landscape
+[1200-1800px: normal styles apply]
+1800 + :      Big desktop
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: #fcfcfc; }
+
+button {
+  cursor: pointer; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.loading__svg {
+  height: 50vh; }
+  .loading__svg--tri-1 {
+    fill: #80bd01;
+    opacity: .55;
+    -webkit-animation: changeColor1 1.5s infinite;
+    -moz-animation: changeColor1 1.5s infinite;
+    -ms-animation: changeColor1 1.5s infinite;
+    animation: changeColor1 1.5s infinite; }
+  .loading__svg--tri-2 {
+    fill: #0094ca;
+    opacity: .55;
+    -webkit-animation: changeColor2 1.5s infinite;
+    -moz-animation: changeColor2 1.5s infinite;
+    -ms-animation: changeColor2 1.5s infinite;
+    animation: changeColor2 1.5s infinite; }
+  .loading__svg--tri-3 {
+    fill: #536372;
+    opacity: .55;
+    -webkit-animation: changeColor3 1.5s infinite;
+    -moz-animation: changeColor3 1.5s infinite;
+    -ms-animation: changeColor3 1.5s infinite;
+    animation: changeColor3 1.5s infinite; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0 !important;
+          margin-bottom: 6rem !important; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+    @media (max-width: 56.25em) {
+      .row .col-1-of-3 {
+        height: 40rem !important; } }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }

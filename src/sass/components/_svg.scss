@@ -1,0 +1,33 @@
+.loading {
+
+  &__svg {
+    height: 50vh;
+
+    &--tri-1 {
+      fill: $kubra-color-green;
+      opacity: .55;
+      -webkit-animation: changeColor1 1.5s infinite;
+      -moz-animation: changeColor1 1.5s infinite;
+      -ms-animation: changeColor1 1.5s infinite;
+      animation: changeColor1 1.5s infinite;
+    }
+
+    &--tri-2 {
+      fill: $kubra-color-blue;
+      opacity: .55;
+      -webkit-animation: changeColor2 1.5s infinite;
+      -moz-animation: changeColor2 1.5s infinite;
+      -ms-animation: changeColor2 1.5s infinite;
+      animation: changeColor2 1.5s infinite;
+    }
+
+    &--tri-3 {
+      fill: $kubra-color-grey;
+      opacity: .55;
+      -webkit-animation: changeColor3 1.5s infinite;
+      -moz-animation: changeColor3 1.5s infinite;
+      -ms-animation: changeColor3 1.5s infinite;
+      animation: changeColor3 1.5s infinite;
+    }
+  }
+}
